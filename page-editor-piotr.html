@@ -7,8 +7,17 @@
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
+      ul {
+        list-style: none;
+      }
       .text-block {
           margin-bottom: 50px;
+      }
+      h2 {
+        padding-top: 80px;
+      }
+      .contents ul {
+        list-style: none;
       }
   </style>
 </head>
@@ -59,16 +68,31 @@
                     <p>Project Role: <b>Student 2</b></p>
                 </section>
 
+                <section class="text-block contents">
+                  <h2>Contents</h2>
+                  <ul>
+                    <li>
+                      <h3><a href="#independent-tasks">Independent Tasks</a></h3>
+                    </li>
+                    <li>
+                      <h3><a href="#other-tasks">Other Tasks</a></h3>
+                    </li>
+                    <li>
+                      <h3><a href="#part-b">Part B</a></h3>
+                    </li>
+                  </ul>
+                </section>
+
                 <section class="text-block">
-                    <h2>Independent tasks to complete by Student 2:</h2>
+                    <h2 id="independent-tasks">Independent tasks to complete by Student 2:</h2>
                     <ul>
                         <li>
-                            <h3>Task 2. Home Page and Navigation Bar</h3>
+                            <h3>Task 2. <a href="home.html">Home Page</a> and <a href="home.html#navbar">Navigation Bar</a></h3>
                             <p>Page template created with navigation bar and footer, using Flexbox Layout. Button-effect with hover applied.</p>
                         </li>
                         <li>
-                            <h3>Task 4. Feedback Form Page</h3>
-                            <p>Feedback form created with 4 input elements, JavaScript validation using alert function and preventing from form submission. Also, comment field displaying number of letters left, as well as  error messages under the field implemented. Submit button asks for confirmation by pop-up window, what once confirmed redirect to the page with confirmation message.</p>
+                            <h3>Task 4. <a href="feedback.html">Feedback Form</a> Page</h3>
+                            <p>Feedback form created with 4 input elements, JavaScript validation using alert function and preventing from form submission. Also, comment field displaying number of letters left, as well as  error messages under the field implemented. Submit button asks for confirmation by pop-up window, what once confirmed redirect to the page with <a href="feedback-success.html">confirmation message</a>.</p>
                         </li>
                         <li>
                             <h3>Task 10.a. External style sheet for main page and navigation</h3>
@@ -78,7 +102,7 @@
                 </section>
                 
                 <section class="text-block">
-                    <h2>Other common tasks:</h2>
+                    <h2 id="other-tasks">Other common tasks:</h2>
                     <ul>
                         <li>
                             <h3>10.b. Using external style sheet on page feedback-form.html and page-editor-piotr.html</h3>
@@ -92,6 +116,7 @@
                         </li>
                         <li>
                             <h3>13. Longer pages having links to specific parts of the page.</h3>
+                            <p>That task was comoleted for the only long page that is the one you are currently reading. At the top of that page you can find 'Contents' section with links to specific parts of that page.</p>
                         </li>
                         <li>
                             <h3>14. Additional JavaScript</h3>
@@ -99,6 +124,15 @@
                             Also comment field has a 150 letters limit, what is displaying dynamically while typing.</p>
                         </li>
                     </ul>
+                </section>
+                <section class="text-block">
+                  <h2 id="part-b">Part B Page</h2>
+                  <ul>
+                    <li>
+                      <h3>Page about the subject of your website</h3>
+                      <p>Regarding to that task we created a <a href="galleries.html">Gallery of out Photographers</a> page, where you can access <a href="gallery-piotr.html">my page</a>, designed accordingly to the 'Prat B' task.</p>
+                    </li>
+                  </ul>
                 </section>
             </div>
         </section>
