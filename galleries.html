@@ -6,41 +6,53 @@
   <title>Photography Online Gallery - Galleries</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style media="screen">
+    .special
+    {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+
+      text-align: center;
+      font-family: arial;
+    background-color: rgb(233, 233, 233);
+      border-radius: 25px;
+      border: 2px solid #000000;
+
+    }
+  </style>
 </head>
 
 <body>
 <!-- HEADER PART -->
-    <header>
-        <div id="logo">
-            <a href="home.html"><img class="logo-img" src="images/logo.jpg" alt="logo for online gallery"></a>
-        </div>
-      <nav id="navbar">
-        <ul>
-          <li>
-            <a href="home.html">Home</a>
-          </li>
-          <li>
-            <a href="#shop">Shop</a>
-          </li>
-          <li>
-            <a href="#quiz">Quiz</a>
-          </li>
-          <li>
-            <a href="feedback.html">Feedback</a>
-          </li>
-          <li>
-            <a href="galleries.html">Galleries</a>
-          </li>
-          <li>
-            <a href="#siteMap">Site Map</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div id="underHeader"></div>
+<header>
+  <div id="logo">
+    <a href="home.html"><img class="logo-img" src="images/logo.jpg" alt="logo for online gallery"></a>
+  </div>
+  <nav id="navbar">
+    <ul>
+      <li>
+        <a href="home.html">Home</a>
+      </li>
+      <li>
+        <a href="shop.html">Shop</a>
+      </li>
+      <li>
+        <a href="#quiz">Quiz</a>
+      </li>
+      <li>
+        <a href="feedback.html">Feedback</a>
+      </li>
+      <li>
+        <a href="galleries.html">Galleries</a>
+      </li>
+      <li>
+        <a href="#siteMap">Site Map</a>
+      </li>
+    </ul>
+  </nav>
+</header>
     <!-- END OF HEADER PART -->
-
-    <div id="pageWrapper">
+    <div id="pageWrapper" style="padding-top:100px;">
     <!-- FROM HERE MAIN CONTENT -->
         <section class="contentContainer">
             <div class="content">
@@ -49,25 +61,27 @@
                 <h3>Iman</h3>
                 <p>
                     <a href="#">
-                        Click to view the gallery <<
+                        Click to view the gallery
                     </a>
                 </p>
                 <h3>Khider</h3>
                 <p>
                     <a href="#">
-                        Click to view the gallery <<
+                        Click to view the gallery
                     </a>
                 </p>
-                <h3>Wojtek</h3>
+                <h3>Wojciech</h3>
+                <div class="special">
                 <p>
-                    <a href="#">
-                        Click to view the gallery <<
+                    <a href="gallery-wojciech.html">
+                        Click to view the gallery
                     </a>
                 </p>
+              </div>
                 <h3>Piotr</h3>
                 <p>
                     <a href="gallery-piotr.html">
-                        Click to view the gallery <<
+                        Click to view the gallery
                     </a>
                 </p>
             </div>
@@ -75,12 +89,16 @@
     <!-- UNTIL HERE MAIN CONTENT -->
     </div>
 
+
     <!-- FOOTER PART -->
     <footer>
       <nav id="footer">
         <ul>
         <li>
             <a href="page-editor-piotr.html">Page Editor - Piotr</a>
+        </li>
+        <li>
+            <a href="page-editor-wojciech.html">Page Editor - Wojciech</a>
         </li>
         </ul>
       </nav>

@@ -49,7 +49,7 @@
     .name-row {
     max-height: 37px;
     }
-  
+
     .rows-left {
     display: inline-block;
     width: 35%;
@@ -113,6 +113,24 @@
     button:hover {
     background-color: rgb(87, 170, 181);
     }
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background: #ccc;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #4caf50;
+      width: 0%;
+    }
+    .header {
+    position: fixed;
+    top: 79px;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+    }
   </style>
 </head>
 
@@ -128,7 +146,7 @@
           <a href="home.html">Home</a>
         </li>
         <li>
-          <a href="#shop">Shop</a>
+          <a href="shop.html">Shop</a>
         </li>
         <li>
           <a href="#quiz">Quiz</a>
@@ -145,6 +163,14 @@
       </ul>
     </nav>
   </header>
+
+
+<div class="header">
+<div class="progress-container">
+  <div class="progress-bar" id="myBar"></div>
+</div>
+</div>
+
     <div id="underHeader"></div>
     <!-- END OF HEADER PART -->
 
@@ -153,11 +179,11 @@
         <section class="contentContainer">
             <div class="content">
                 <img id="contact-image" src="images/contact.jpg" alt="letter box">
-                
+
                 <h1 class="center">We appreciate your feedback!</h1>
 
                 <p class="center">Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
-                
+
                 <form name="feedback" action="feedback-success.html" method="post" onsubmit="return validateForm()">
                     <div class="rows-left"></div>
                     <div class="rows-right">
@@ -314,6 +340,15 @@
         var charLeft = 150;
         document.getElementById("letters-limit").innerHTML = charLeft - currentInput.length - 1;
       })
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
 
     </script>
 </body>
