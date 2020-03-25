@@ -6,6 +6,46 @@
   <title>Photography Online Gallery - Piotr's Gallery</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .content {
+      text-align: center;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    #gallery {
+      display: grid;
+      max-width: 100%;
+      grid-gap: 10px;
+      grid-row-gap: 30px;
+    }
+    .thumbnails {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .large-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    img {
+      width: 100%;
+      height: 75%;
+      object-fit:cover;
+    }
+    .button {
+    padding: 10px;
+    margin-bottom: 40px;
+    background-color: rgb(55, 135, 146);
+    border: 2px solid rgb(55, 135, 146);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: white;
+    }
+    .button:hover {
+    background-color: rgb(87, 170, 181);
+    }
+  </style>
 </head>
 
 <body>
@@ -44,8 +84,61 @@
     <!-- FROM HERE MAIN CONTENT -->
         <section class="contentContainer">
             <div class="content">
-                
+                <div>
+                  <h1>Photo Gallery from Piotr</h1>
+                  <p>Browse Piotr's best gallery from his travelling around the world.<br> Many of those pictures are available to buy as photo prints and canvas.<br> To find out more visit our <a href="#">Shop</a>.</p>
+                </div>
+                <div>
+                  <h2>Choose gallery view: </h2>
+                  <input type="button" value="Thumbnails" id="thumbnails-button" class="button">
+                  <input type="button" value="Large" id="large-gallery-button" class="button">
+                </div>
+                <hr>
+                <div id="gallery" class="thumbnails">
+                  <div class="grid-item">
+                    <p>Dubrovnik, Croatia</p>
+                    <img src="images/gallery-piotr/1.jpg" alt="Old town in Dubrownik, view from the top">
+                  </div>
+                  <div class="grid-item">
+                    <p>Dubrovnik, Croatia</p>
+                    <img src="images/gallery-piotr/2.jpg" alt="Old town in Dubrownik">
+                  </div>
+                  <div class="grid-item">
+                    <p>Venice, Italy</p>
+                    <img src="images/gallery-piotr/3.jpg" alt="Port in Venice, Italy">
+                  </div>
+                  <div class="grid-item">
+                    <p>Venice, Italy</p>
+                    <img src="images/gallery-piotr/4.jpg" alt="Port in Venice, Italy">
+                  </div>
+                  <div class="grid-item">
+                    <p>Swinoujscie, Poland</p>
+                    <img src="images/gallery-piotr/5.jpg" alt="Beach in Swiniujscie, Poland">
+                  </div>
+                  <div class="grid-item">
+                    <p>Es Mercadal, Menorca, Spain</p>
+                    <img src="images/gallery-piotr/7.jpg" alt="View at the Mercadal village on Menorca">
+                  </div>
+                  <div class="grid-item">
+                    <p>Ciutadella, Menorca</p>
+                    <img src="images/gallery-piotr/8.jpg" alt="Panoramic view of port in Ciutadella">
+                  </div>
+                  <div class="grid-item">
+                    <p>Istanbul, Turkey</p>
+                    <img src="images/gallery-piotr/9.jpg" alt="View st the Mosque during sunset">
+                  </div>
+                  <div class="grid-item">
+                    <p>Istanbul, Turkey</p>
+                    <img src="images/gallery-piotr/10.jpg" alt="Inside the Mosque">
+                  </div>
+                  <div class="grid-item">
+                    <p>Istanbul, Turkey</p>
+                    <img src="images/gallery-piotr/11.jpg" alt="In front of the Mosque">
+                  </div>
+                </div>
             </div>
+
+
         </section>
     <!-- UNTIL HERE MAIN CONTENT -->
     </div>
@@ -63,5 +156,13 @@
     </footer>
     <!-- END OF FOOTER PART -->
 
+    <script>
+      document.getElementById("large-gallery-button").addEventListener("click", function(){
+        document.getElementById("gallery").className = "large-gallery";
+      })
+      document.getElementById("thumbnails-button").addEventListener("click", function(){
+        document.getElementById("gallery").className = "thumbnails";
+      })
+    </script>
 </body>
 </html>

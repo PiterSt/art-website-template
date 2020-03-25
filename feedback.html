@@ -8,18 +8,15 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-
     #contact-image {
       display: block;
       max-height: 250px;
       margin: 0 auto;
     }
-
     .center {
       text-align: center;
       margin-top: 40px;
     }
-
     form {
     padding-top: 50px;
     text-align: center;
@@ -27,7 +24,6 @@
     form p {
     font-size: 0.8em;
     }
-
     p.error {
     color: red;
     animation: shake 75ms 5 ease-in alternate;
@@ -40,7 +36,6 @@
       margin-left: 0;
       }
     }
-
     #letters-limit {
       color: red;
       margin-top: 40px;
@@ -102,7 +97,7 @@
     button {
     display: block;
     padding: 15px;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 70%;
     background-color: rgb(55, 135, 146);
     border: 2px solid rgb(55, 135, 146);
@@ -237,24 +232,24 @@
                         </div>
                         <div class="rows-right" id="radio-right-row">
                             <div class="radio-select">
+                              <input type="radio" id="excellent" name="rating" value="excellent">
+                              <label for="excellent">Excellent</label>
+                            </div>
+                            <div class="radio-select">
+                              <input type="radio" id="good" name="rating" value="good">
+                              <label for="good">Good</label>
+                            </div>
+                            <div class="radio-select">
+                              <input type="radio" id="average" name="rating" value="average">
+                              <label for="average">Average</label>
+                            </div>
+                            <div class="radio-select">
+                              <input type="radio" id="poor" name="rating" value="poor">
+                              <label for="poor">Poor</label>
+                            </div>
+                            <div class="radio-select">
                                 <input type="radio" id="very-poor" name="rating" value="very poor">
                                 <label for="very-poor">Very Poor</label>
-                            </div>
-                            <div class="radio-select">
-                                <input type="radio" id="poor" name="rating" value="poor">
-                                <label for="poor">Poor</label>
-                            </div>
-                            <div class="radio-select">
-                                <input type="radio" id="average" name="rating" value="average">
-                                <label for="average">Average</label>
-                            </div>
-                            <div class="radio-select">
-                                <input type="radio" id="good" name="rating" value="good">
-                                <label for="good">Good</label>
-                            </div>
-                            <div class="radio-select">
-                                <input type="radio" id="excellent" name="rating" value="excellent">
-                                <label for="excellent">Excellent</label>
                             </div>
                             <span id="radio-error"></span>
                         </div>
@@ -290,23 +285,23 @@
 
     <!-- JavaScript FROM HERE -->
     <script>
-      const errorAlert = "Form submission unsuccessful!\nSee errors below.";
-      var nameError = "<p class=\"error\">Field Name has to be filled out!</p>";
-      var radioError = "<p class=\"error\">Rating option has to be chosen!</p>";
+      
+      // Validation form function
       var radioArray = document.getElementsByName("rating");
-      var radioSelectedValue = "";
 
       function validateForm() {
+        const errorAlert = "Form submission unsuccessful!\nSee errors below.";
+        var radioSelectedValue = "";
+
         var nameValue = document.getElementById("name").value;
         var commentValue = document.getElementById("comment").value;
-        var nameField = '<input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">';
 
         for (let i=0; i<radioArray.length; i++) {
           if (radioArray[i].checked) {
             radioSelectedValue = radioArray[i].value;
           }
         }
-
+        // Check required fields
         if (nameValue == "") {
           alert(errorAlert);
           document.getElementById("name-error").innerHTML = nameError;
@@ -316,9 +311,13 @@
           document.getElementById("radio-error").innerHTML = radioError;
           return false;
         } else {
+          // Popup window with the summary
           return confirm("Dear " + nameValue + ",\nThank you very much for your feedback. You have rated our site as '" + radioSelectedValue + "' and your comment is ''" + commentValue + "''.\n\n By clicking 'OK' you confirm sending following feedback to us.");
         }
       }
+      // Variables for inline error message
+      var nameError = "<p class=\"error\">Field Name has to be filled out!</p>";
+      var radioError = "<p class=\"error\">Rating option has to be chosen!</p>";
 
       document.getElementById("name").addEventListener("input", function(){
         if (this.value == "") {
@@ -326,7 +325,7 @@
         } else {
           document.getElementById("name-error").innerHTML = "";
         }
-      })
+      });
 
       for (let i=0; i<radioArray.length; i++) {
         radioArray[i].addEventListener("change", function(){
@@ -336,7 +335,7 @@
         })
       }
 
-      document.getElementById("comment").addEventListener("keydown", function(){
+      document.getElementById("comment").addEventListener("input", function(){
         var currentInput = this.value;
         var charLeft = 150;
         document.getElementById("letters-limit").innerHTML = charLeft - currentInput.length - 1;

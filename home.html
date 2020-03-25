@@ -6,6 +6,11 @@
   <title>Photography Online Gallery - Fill your home with beautiful pictures</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .font-size-bar {
+      text-align: center;
+    }
+  </style>
   <script>
     var size;
     function incfont()
@@ -69,40 +74,37 @@ background-color: #f1f1f1;
     </ul>
   </nav>
 </header>
-
-
     <div class="header">
     <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
     </div>
   </div>
-
 <section id=introduction>
   <h1>Fill Your Space With beautiful Views</h1>
   <p>Buy photo prints and canvas</p>
 </section>
-<span id="text">
+
+
+
 <div id="pageWrapper">
-      <section class="contentContainer">
-        <div class="content">
-          <h1>Hello, That is a home page:</h1>
-          <p>Lorem ipsum dolor sit amet, persius explicari consequuntur no vis, ut cibo principes vis. Legendos deseruisse per at. Audire nominati ea vix, sed consul putant indoctum ea. Modo melius maiorum pro id. Cu purto vituperatoribus vel, eu vix deseruisse necessitatibus.</p>
-
-          <p>Ex meliore partiendo signiferumque cum. Has doming offendit ut. No sit liber assueverit necessitatibus, an deleniti delectus recusabo mei. Vis illum tincidunt eu, nostro possim accusata nec an.</p>
-        </div>
-      </section>
-
-      <section class="contentContainer">
-        <div class="content">
-          <h1>Hello, This is coursework page:</h1>
-          <p>Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore. While lorem ipsum's still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.</p>
-        </div>
-      </section>
+  <div class="font-size-bar"><input type="range" onclick="incfont();" id="fontsize" min="20" max="40" value="20" style="width:30%" />
+  <label style="display:block;">Font Size: <span id="size">20</span></label><br>
 </div>
-<span><input type="range" onclick="incfont();" id="fontsize" min="20" max="40" value="20" style="width:100%" /></span>
-<label style="display:block;">Font Size:<span id="size">20</span></label><br>
-</span>
+<span id="text">
+      <section class="contentContainer">
+        <div class="content">
 
+          <h1>See Our Group Members</h1>
+          <p>This page section is to contain group members introduction, which meant to be done by Student 3 (task 9).</p>
+
+          <p>Ex meliore partiendo signiferumque cum. Has doming offendit ut. No sit liber assueverit necessitatibus, an deleniti delectus recusabo mei. Vis illum tincidunt eu, nostro possim accusata nec an.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quae hic totam iure necessitatibus illum, culpa sint quidem eos excepturi commodi magnam non, natus enim. Exercitationem, impedit esse? Doloremque, quae?
+          </p>
+        </div>
+      </section>
+      
+</div>
+</span>
 
 <footer>
   <nav id="footer">
